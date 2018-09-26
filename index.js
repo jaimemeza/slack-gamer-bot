@@ -28,10 +28,16 @@ rtm.on("message", msg => {
         send("Doing well and you <@" + msg.user + ">?",msg.channel);
     } else if ( msg.text == "say hello" && msg.user == "UB5FHHXPV") {
         send("Hello <!channel>", msg.channel);
-    }  else if ( msg.text.slice(msg.text.length - 2,2 ) == "??") {
+    }  else if ( msg.text.slice(msg.text.length - 2, msg.text.length) == "??") {
         send("What's wrong with you <@" + msg.user + ">?", msg.channel);
     } else if ( msg.text.charAt(msg.text.length - 1) == "?") {
         send("I don't have money <@" + msg.user + ">", msg.channel);
+    } else if ( msg.text == "yeah") {
+        send("Yeah what <@" + msg.user + ">?", msg.channel);
+    } else if ( msg.text.slice(0,4) == "drop") {
+        send("Deleting all the feelings for <@" + msg.user + ">", msg.channel);
+    } else if ( msg.text.slice(0,4) == "jaja") {
+        send("Mucha risa <@" + msg.user + ">?", msg.channel);
     } else if ( msg.text == "grr" && msg.user == "UB5FHHXPV") {
         send("GGGGGRRRRRRRRR!!!!!!!!", msg.channel);
     } else if ( msg.text == "start game" && game == 0) {
